@@ -1,0 +1,49 @@
+body { 
+	color: rgb(255, 85, 0); 
+	font-weight: bold; 
+	font-size: 35px; 
+	font-family: "Courier New"; 
+	background: rgb(72, 214, 253); 
+}
+
+body::after {
+	content: "";
+	background-image: url("bot.png");
+	background-repeat: repeat-y; 
+
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+  }
+  @media screen and (max-width: 800px){
+	body{
+		font-size: 30px;
+	}
+	}
+	
+span { 
+	color: rgb(36, 17, 119); 
+} 
+::-webkit-input-placeholder { 
+	color: #711 
+}
+#main { 
+	position: fixed; 
+	top: 0%; 
+	right: 200px; 
+	width: 400px; 
+	border: 0px solid #421; 
+	padding: 40px; 
+}
+#main div { 
+	margin: 10px; 
+} 
+#input { 
+	border: 2.5px dashed red; 
+	padding: 8px 16px; 
+	border-radius: 25px ;
+	margin: 0 4px; 
+}
