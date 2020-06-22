@@ -4,9 +4,20 @@ body {
 	font-size: 35px; 
 	font-family: "Courier New"; 
 	background: rgb(72, 214, 253); 
+	padding: 0%;
+	margin: 0;
 }
-
-body::after {
+.header {
+	display: flex;
+	background: #f1f1f1;
+	width: 100%;
+	margin: 0;
+	padding: 0 10px;
+	box-shadow: 0 2px 3px lightgray;
+	box-sizing: border-box;
+	height: 5%;
+}
+/* body::after {
 	content: "";
 	background-image: url("bot.png");
 	background-repeat: repeat-y; 
@@ -17,13 +28,7 @@ body::after {
 	right: 0;
 	position: absolute;
 	z-index: -1;   
-  }
-  @media screen and (max-width: 800px){
-	body{
-		font-size: 30px;
-	}
-	}
-	
+  } */
 span { 
 	color: rgb(36, 17, 119); 
 } 
@@ -31,21 +36,42 @@ span {
 	color: #711 
 }
 #main { 
-	position: fixed; 
-	top: 0%; 
-	right: 200px; 
-	width: 400px; 
+	width: 100%; 
 	border: 0px solid #421; 
 	padding: 40px; 
+	/* width: 100%; */
+	box-sizing: border-box;
+	display: flex;
+	flex: 1;
 }
-#main div { 
-	margin: 10px; 
+#main > img {
+	width: 30%;
+	height: 100%;
+}
+#main > div { 
+	margin-left: 10px;
+	margin-top: 10px;
+	box-sizing: border-box; 
+	flex: 1;
 } 
+.text-area {
+	display: flex;
+	width: 100%;
+}
+#messages {
+	overflow-y: auto;
+	width: 100%;
+	box-sizing: border-box;
+	height: 70vh;
+}
 #input { 
 	border: 2.5px dashed red; 
 	padding: 8px 16px; 
 	border-radius: 25px ;
 	margin: 0 4px; 
+	box-sizing: border-box;
+	flex: 1;
+	outline: none;
 }
 
 button{
@@ -62,4 +88,24 @@ button{
 button:hover{
 background-color: white;
 color: rgb(255, 85, 0);
+}
+@media screen and (max-width: 500px) {
+	.header > p {
+		font-size: .5em;
+	}
+	#main {
+		padding: 5px;
+	}
+	#main > img {
+		/* display: none!important; */
+		width: 0px;
+	}
+	#input {
+		width: 100%;
+		padding: 5px 10px;
+		font-size: .5em!important;
+	}
+	#messages {
+		height: 85vh;
+	}
 }

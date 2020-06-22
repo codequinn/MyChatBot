@@ -141,17 +141,20 @@ function compare(triggerArray, replyArray, string) {
 }
 
 function addChat(input, product) {
-  const mainDiv = document.getElementById("main");
+  const mainDiv = document.getElementById("messages");
   let userDiv = document.createElement("div");
   userDiv.id = "user";
+  userDiv.class = "message"
   userDiv.innerHTML = `You: <span id="user-response">${input}</span>`;
   mainDiv.appendChild(userDiv);
 
   let botDiv = document.createElement("div");
   botDiv.id = "bot";
+  botDiv.class = "message"
   botDiv.innerHTML = `Chatbot: <span id="bot-response">${product}</span>`;
   mainDiv.appendChild(botDiv);
   speak(product);
+  botDiv.scrollIntoView(true);
 }
 
 const synth = window.speechSynthesis;
