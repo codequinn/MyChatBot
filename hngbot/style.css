@@ -47,3 +47,19 @@ span {
 	border-radius: 25px ;
 	margin: 0 4px; 
 }
+
+button{
+    background-color:rgb(255, 85, 0);
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    color:  rgb(255, 255, 255);;
+    font-size: large;
+    text-transform: uppercase;
+    border: none;
+
+}
+
+button:hover{
+background-color: white;
+color: rgb(255, 85, 0);
+}
