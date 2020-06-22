@@ -73,6 +73,23 @@ const coronavirus = ["Please stay home"];
 
 document.addEventListener("DOMContentLoaded", () => {
 	const inputField = document.getElementById("input")
+	
+	    //WHERE OLUSEYI WORKED
+    const submitBtn = document.querySelector('button') 
+
+    submitBtn.addEventListener('click', () => {
+            let input = inputField.value;
+        if (inputField.value == '') {
+            alert ('please say something')
+        } else {
+              inputField.value = "";
+
+              output(input);
+        }
+          
+    })
+    //WHERE I FINISHED
+
 	inputField.addEventListener("keydown", function(e) {
 		if (e.code === "Enter") {
 			let input = inputField.value;
